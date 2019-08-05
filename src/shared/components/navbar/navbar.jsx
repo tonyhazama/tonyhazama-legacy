@@ -1,15 +1,37 @@
 import React, { Component } from 'react'
-import { Nav } from 'react-bootstrap';
+import { Nav, Navbar, NavDropdown, Form, FormControl, Button, Container } from 'react-bootstrap';
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
-export default class Navbar extends Component {
+export default class AppNavbar extends Component {
+  menu = [
+    { path:'home', title: 'Home' },
+    { path:'about', title: 'About' },
+    { path:'portofolio', title: 'Portofolio' },
+    { path:'contact', title: 'Contact' },
+    { path:'resume', title: 'Resume' },
+  ]
+  
+  goTo(path) {
+    console.log(path);
+  }
+
   render() {
     return (
-      <Nav activeKey="/home" onSelect={selectedKey => alert(`selected ${selectedKey}`)} >
-        <Nav.Item><Nav.Link href="/home">Active</Nav.Link></Nav.Item>
-        <Nav.Item><Nav.Link eventKey="link-1">Link</Nav.Link></Nav.Item>
-        <Nav.Item><Nav.Link eventKey="link-2">Link</Nav.Link></Nav.Item>
-        <Nav.Item><Nav.Link eventKey="disabled" disabled>Disabled</Nav.Link></Nav.Item>
-      </Nav>
+      <Navbar bg="transparent" variant="dark" expand="lg" fixed="top">
+        <Container>
+          <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+            <Nav>
+              {this.menu.map(menuItem => (
+                <Nav.Item>
+                  <AnchorLink className="nav-link" href={`#${menuItem.path}`}>{menuItem.title}</AnchorLink>
+                </Nav.Item>
+              ))}
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
     )
   }
 }

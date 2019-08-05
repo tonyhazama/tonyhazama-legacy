@@ -6,10 +6,6 @@
     height: 80px;
   }
 
-  .sidebar{
-
-  }
-
   .body{
     max-height: 100%;
     overflow-y: auto;
@@ -20,12 +16,21 @@
   padding: 0px;
 }
 
-.fullscreen {
+.page{
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.fullpage {
   height: 100vh;
   width: 100%;
 }
 
-.fullscreen.center {
+.fullscreen{
+  height: 100%;
+}
+
+.fullscreen.center, .fullpage.center {
   display: flex;
   justify-content: center;
   align-items: center;

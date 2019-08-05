@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import Splash from './splash/splash';
 import Home from './home/home';
-import MainLayout from 'layout/main/main';
+import Layout from 'app/layout/layout';
+import MainPage from 'app/main-page/main-page';
 
 // import './App.css';
 
@@ -15,7 +15,7 @@ export default class App extends Component{
   constructor(props) {
     super(props);
     this.state = {
-      isLoading: true
+      isLoading: false
     }
   }
 
@@ -28,15 +28,15 @@ export default class App extends Component{
     return isLoading ? (
       <Splash />
     ) : (
-      <MainLayout>
+      <Layout>
         <Router>
-          <div>
-            <Route exact path="/" component={Home} />
+          <div id="router-wrapper">
+            <Route exact path="/" component={MainPage} />
             <Route path="/home" component={Home} />
             {/* <Route path="/topics" component={Topics} /> */}
           </div>
         </Router>
-      </MainLayout>
+      </Layout>
     );
   }
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Nav } from 'react-bootstrap';
 
-export default class Sidebar extends Component {
+export default class AppSidebar extends Component {
   render() {
     return (
       <Nav defaultActiveKey="/home" className="flex-column" id="sidebar">
