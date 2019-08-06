@@ -1,15 +1,24 @@
 #home{
   height: 100vh;
   background: url(../images/bg.jpg);
+  background-size: cover;
+  background-position: center; 
   color: #ffffff;
 
   .name{
-    font-size: 48px;
-    font-weight: bold;
+    // font-variant: 'bold';
+    font-size: 3.2em;
+    margin-bottom: 0px;
+    font-weight: 600;
   }
 
   .job{
-    font-size: 32px;
+    font-size: 2em;
     font-weight: 300;
+    margin-bottom: 1em;
   }
+
+  .desc{
+    font-size: 1.4em;
+    font-weight: 300;  }
 }

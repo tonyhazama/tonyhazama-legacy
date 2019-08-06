@@ -1,0 +1,10 @@
+.text {
+  font-weight: 400;
+
+  &.small { font-size: 1em; }
+  &.medium{ font-size: 1.2em; }
+  &.large{ font-size: 1.4em; }
+
+  &.bold{ font-weight: 700; }
+  &.bolder{ font-weight: 900; }
+}

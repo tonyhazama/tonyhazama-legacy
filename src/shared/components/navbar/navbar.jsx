@@ -19,7 +19,7 @@ export default class AppNavbar extends Component {
     return (
       <Navbar bg="transparent" variant="dark" expand="lg" fixed="top">
         <Container>
-          <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+          <Navbar.Brand href="#home">Tony Hazama</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
             <Nav>

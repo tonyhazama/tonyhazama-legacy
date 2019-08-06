@@ -1,15 +1,5 @@
 #container{
   height: 100vh;
-
-  // Navbar Row
-  .navbar{
-    height: 80px;
-  }
-
-  .body{
-    max-height: 100%;
-    overflow-y: auto;
-  }
 }
 
 .no-padding{
@@ -34,4 +24,28 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  align-content: center;
+}
+
+.section {
+  width: 100%
+}
+
+.section.dark{
+  background: #151212;
+  color: #ffffff
+}
+
+.section.black{
+  background: #000000;
+  color: #ffffff
+}
+
+.section.dim{
+  background: #dddddd;
+}
+
+.section.cyan{
+  background: #43c1c7;
+  color: #ffffff
 }

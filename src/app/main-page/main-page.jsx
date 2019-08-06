@@ -7,7 +7,7 @@ export default class MainPage extends Component {
     return (
       <div>
         <Home />
-        <About />
+        <About theme="dark" />
       </div>
     )
   }
