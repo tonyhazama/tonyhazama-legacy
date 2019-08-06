@@ -29,7 +29,7 @@ export default class App extends Component{
       <Splash />
     ) : (
       <Layout>
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
           <div id="router-wrapper">
             <Route exact path="/" component={MainPage} />
             <Route path="/home" component={Home} />
