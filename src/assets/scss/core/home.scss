@@ -26,8 +26,8 @@
 
   .sidelink{
     display: flex;
-    flex-direction: row;
-    writing-mode: vertical-rl;
+    flex-direction: column;
+    // writing-mode: vertical-rl;
     > div { margin: 0px 1em; }
   }
 }
