@@ -8,11 +8,13 @@
 
 .page{
   padding-top: 80px;
-  padding-bottom: 80px;
+  padding-bottom: 120px;
 }
 
-.fullpage {
-  height: 100vh;
+
+
+.fullpage{
+  min-height: 100vh !important;
   width: 100%;
 }
 
@@ -28,24 +30,37 @@
 }
 
 .section {
-  width: 100%
+  width: 100%;
 }
 
-.section.dark{
+.section{
+  margin: 0px auto;
+
+  &:first-child{
+    padding-top: 80px;
+  }
+}
+
+.section.dark, .dark{
   background: #151212;
   color: #ffffff
 }
 
-.section.black{
+.section.black, .black{
   background: #000000;
   color: #ffffff
 }
 
-.section.dim{
+.section.dim, .dim{
   background: #dddddd;
 }
 
-.section.cyan{
+.section.light, .light{
+  background: #ffffff;
+  color: #151212;
+}
+
+.section.cyan, .cyan{
   background: #43c1c7;
   color: #ffffff
 }

@@ -10,7 +10,7 @@ export default class LoadingText extends Component {
 
   updateDots = () => {
     let { dots } = this.state;
-    const { dotCount = 3 } = this.props;
+    const { dotCount = 3} = this.props;
     if (dots.length < dotCount) {
       dots += '.';
     } else {
@@ -26,6 +26,7 @@ export default class LoadingText extends Component {
   
 
   render() {
-    return <span>{this.props.text} {this.state.dots}</span>
+    const { color = '#151212' } = this.props;
+    return <span style={{color: color}}>{this.props.text} {this.state.dots}</span>
   }
 }
