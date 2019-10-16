@@ -1,3 +1,6 @@
+$darkslate: #102629 
+
+
 *{
   font-family: Poppins, Arial, Helvetica, sans-serif;
 }
@@ -49,30 +52,54 @@
 #portfolio{
 
   .tiles{
+    $tile-h: 240px;
+    $gap: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 1em;
-    grid-row-gap: 1em;
+    // grid-template-rows: repeat(9, #{$tile-h});
+    // grid-template-areas: 
+    //   "tile1 tile1 tile2" 
+    //   "tile1 tile1 tile2" 
+    //   "tile1 tile1 tile2" 
+    //   "tile1 tile1 tile2" 
+    //   "tile3 tile4 tile4" 
+    //   "tile3 tile4 tile4" 
+    //   "tile5 tile5 tile5" 
+    //   "tile5 tile5 tile5" 
+    //   "tile5 tile5 tile5";
+    grid-template-areas: "tile1 tile1 tile2" "tile3 tile4 tile4" "tile5 tile5 tile5"; 
+    grid-template-rows: calc(1.68 * #{$tile-h}) $tile-h calc(1.5 * #{$tile-h});
+    grid-gap: $gap;
 
     .tile{
+      height: $tile-h;
       grid-column: span 1;
-      height: 200px;
+      grid-row: span 2;
+      height: 100%;
+      width: 100%;
       text-align: center;
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
       cursor: pointer;
 
+      // &.w-span-2{ grid-column: span 2; }
+      // &.w-span-3{ grid-column: span 3; }
+      // &.h-span-3{ grid-row: span 3; height: calc(#{(3 * $tile-h) + 40px});}
+      // &.h-span-4{ grid-row: span 4; height: calc(#{(4 * $tile-h) + 60px});}
       .wrapper{
         width: 100%;
         height: 100%;
         padding: 20px;
         background: rgba(0, 0, 0, 0.0);
         transition: 0.3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         .title{
-          line-height: 160px;
-          font-size: 1.1em;
+          // line-height: 160px;
+          font-size: 0.9em;
           text-align: center;
           // font-weight: bold;
           color: #ffffff;
@@ -135,8 +162,8 @@
   }
 
   .navbar.compact{
-    height: 60px;
-    background: rgba(21, 18, 18, 0.5) !important;
+    height: 50px;
+    background: rgba(21, 18, 18, 0.7) !important;
 
     .navbar-brand {
       img, span { opacity: 1; }

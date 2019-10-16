@@ -13,7 +13,7 @@ export default class Contact extends Component {
   render() {
     const { theme } = this.props;
     return (
-      <div className={"section dark"} id="contact">
+      <div className={"section " + theme} id="contact">
         <Container className="page">
           <h4 className="section-title">Contact</h4>
           <p className="text medium">

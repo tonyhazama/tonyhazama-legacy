@@ -10,17 +10,18 @@ export default class Home extends Component {
             <Row className="fullpage center">
               <Col sm="2" style={{height: '100vh', display: 'flex', alignItems: 'end', padding: '60px 0px'}}>
                 {/* <img src={emblem} alt="T"/> */}
-                <div className="sidelink">
-                  <div>Github</div>
-                  <div>Behance</div>
-                  {/* <span>Web Designer</span> */}
-                </div>
               </Col>
               <Col sm="8" className="text-center white">
                 <h1 className="name">Muhammad Sultoni</h1>
                 <h3 className="job">Web Developer</h3>
               </Col>
-              <Col></Col>
+              <Col sm="2" style={{height: '100vh', display: 'flex', alignItems: 'flex-end', padding: '40px 0px'}}>
+                <div className="sidelink">
+                  <div>Github</div>
+                  <div>Instagram</div>
+                  {/* <div>Web </div> */}
+                </div>
+              </Col>
             </Row>
           </div>
         </div>

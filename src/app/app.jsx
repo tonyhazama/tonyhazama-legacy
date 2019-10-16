@@ -20,7 +20,8 @@ export default class App extends Component{
   }
 
   componentDidMount() {
-    setTimeout(() => this.setState({isLoading: false}), 1000);
+    // setTimeout(() => this.setState({isLoading: false}), 1000);
+    this.setState({isLoading: false})
   }
 
   render() {

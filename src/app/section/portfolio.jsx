@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import { Container} from 'react-bootstrap';
 import ReactModal from 'react-modal';
-import { Portfolio1 } from './portfolio-item';
+import { Portfolio1, Portfolio2, Portfolio3 } from './portfolio-item';
 
 
 
@@ -16,14 +15,11 @@ export default class Portfolio extends Component {
   }
 
   works = [
-    { title: 'Work 1', image: '' },
-    { title: 'Work 2', image: '' },
-    { title: 'Work 3', image: '' },
-    { title: 'Marketplace Auction Price', image: '' },
-    { title: 'CSMART BCA', image: '' },
-    { title: 'Work 3', image: '' },
-    { title: 'Marketplace Auction Price', image: '' },
-    { title: 'CSMART BCA', image: '' },
+    { title: 'Classmate', image: 'hehe.jpg', content: Portfolio1 },
+    { title: 'Marketplace Auction Price', image: 'mosaic.jpg', content: Portfolio2 },
+    { title: 'VMD Lab', image: 'mosaic.jpg', content: Portfolio3 },
+    { title: 'CSMART BCA', image: 'ee.jpg', content: Portfolio1 },
+    { title: 'EMR - Electronic Medical Record', image: '', content: Portfolio1 },
   ]
 
   openModal(index) {
@@ -39,15 +35,25 @@ export default class Portfolio extends Component {
   render() {
     const { theme } = this.props;
     return (
-      <div className={"section dark"} id="portfolio">
+      <div className={"section " + theme} id="portfolio">
         <div className="container page">
           <h4 className="section-title">Portfolio</h4>
           <div className="tiles">
-            {this.works.map((item, index) => (
-              <div className="tile" onClick={_ => this.openModal(index)} key={'portfolio-item-'+index} style={{backgroundImage: `url(${process.env.PUBLIC_URL}/images/portofolio/${(index % 5)+1}.jpg)`}}>
-                <div className="wrapper"> <div className="title">{item.title}</div> </div>
-              </div>
-            ))}
+            {this.works.map((item, index) => {
+              const bg = !!item.image ?  item.image : `${(index % 5)+1}.jpg`;
+              return (
+                <div 
+                  className="tile"
+                  onClick={_ => this.openModal(index)} 
+                  key={'portfolio-item-'+index} 
+                  style={{
+                    backgroundImage: `url(${process.env.PUBLIC_URL}/images/portofolio/${bg})`,
+                    gridArea: `tile${index + 1}`
+                  }}>
+                  <div className="wrapper"> <div className="title">{item.title}</div> </div>
+                </div>
+              )
+            })}
           </div>
         </div>
         <PortfolioModal item={this.state.activePortfolio} onClose={_ => this.closeModal()}  />
@@ -58,7 +64,7 @@ export default class Portfolio extends Component {
 
 
 const PortfolioModal = ({item, onClose}) => {
-
+  const Content = !!item ? item.content : () => null; 
   return (
     <ReactModal 
       isOpen={!!item}
@@ -67,7 +73,7 @@ const PortfolioModal = ({item, onClose}) => {
       overlayClassName="Overlay"
       ariaHideApp={false}
     > 
-      <Portfolio1 />
+      <Content />
     </ReactModal>
   );
 };

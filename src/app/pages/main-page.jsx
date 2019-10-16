@@ -16,9 +16,9 @@ export default class MainPage extends Component {
     return (
       <div>
         <Home />
-        <About theme={this.state.theme} />
-        <Portfolio theme={this.state.theme} />
-        <Contact theme={this.state.theme} />
+        <About theme={'light'} />
+        <Portfolio theme={'light'} />
+        <Contact theme={'dark'} />
       </div>
     )
   }

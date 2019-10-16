@@ -41,7 +41,7 @@ export default class AppNavbar extends Component {
             <Nav>
               {this.menu.map(menuItem => (
                 <Nav.Item key={menuItem.path}>
-                  <AnchorLink offset='59px' className="nav-link" href={`#${menuItem.path}`}>{menuItem.title}</AnchorLink>
+                  <AnchorLink offset='49px' className="nav-link" href={`#${menuItem.path}`}>{menuItem.title}</AnchorLink>
                 </Nav.Item>
               ))}
             </Nav>
