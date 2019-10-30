@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ReactModal from 'react-modal';
-import { Portfolio1, Portfolio2, Portfolio3 } from './portfolio-item';
-
+import { Portfolio2, Portfolio3, Vmdlab, Trav, MapIbid, Csmart } from './portfolio-item';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 
 export default class Portfolio extends Component {
@@ -15,11 +15,11 @@ export default class Portfolio extends Component {
   }
 
   works = [
-    { title: 'Classmate', image: 'hehe.jpg', content: Portfolio1 },
-    { title: 'Marketplace Auction Price', image: 'mosaic.jpg', content: Portfolio2 },
-    { title: 'VMD Lab', image: 'mosaic.jpg', content: Portfolio3 },
-    { title: 'CSMART BCA', image: 'ee.jpg', content: Portfolio1 },
-    { title: 'EMR - Electronic Medical Record', image: '', content: Portfolio1 },
+    { title: 'Market Auction Price', image: 'map3.jpg', content: MapIbid, tag: 'WEB DEVELOPMENT' },
+    { title: 'Trav', image: 'trav2.jpg', content: Trav, tag: 'UI/UX' },
+    { title: 'VMD Lab', image: 'vmdlab.jpg', content: Vmdlab, tag: 'WEB DEVELOPMENT' },
+    { title: 'CSMART BCA', image: 'hehe.jpg', content: Csmart, tag: 'UI/UX' },
+    { title: 'EMR - Electronic Medical Record', image: 'hehe.jpg', content: Portfolio2, tag: 'WEB DEVELOPMENT' },
   ]
 
   openModal(index) {
@@ -37,10 +37,10 @@ export default class Portfolio extends Component {
     return (
       <div className={"section " + theme} id="portfolio">
         <div className="container page">
-          <h4 className="section-title">Portfolio</h4>
+        <h4 className="section-title" href='#portfolio'># Portfolio</h4>
           <div className="tiles">
             {this.works.map((item, index) => {
-              const bg = !!item.image ?  item.image : `${(index % 5)+1}.jpg`;
+              const bg = !!item.image ?  item.image : `1.jpg`;
               return (
                 <div 
                   className="tile"
@@ -50,6 +50,7 @@ export default class Portfolio extends Component {
                     backgroundImage: `url(${process.env.PUBLIC_URL}/images/portofolio/${bg})`,
                     gridArea: `tile${index + 1}`
                   }}>
+                  <div className="tag">{item.tag}</div>
                   <div className="wrapper"> <div className="title">{item.title}</div> </div>
                 </div>
               )

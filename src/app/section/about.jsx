@@ -12,7 +12,7 @@ export default class About extends Component {
             <div className="col-md-4">
               <img src={profilePic} alt="s" style={{width: '100%'}}/>
             </div>
-            <div className="col-md-8" style={{padding: '1em 2em'}}>
+            <div className="col-md-8" style={{padding: '1em 1.5em'}}>
               <h4 className="section-title">About</h4>
               <p className="text medium">
                 I’m a Professional Web Developer, passionate about
