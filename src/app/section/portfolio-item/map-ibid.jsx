@@ -16,7 +16,7 @@ export const MapIbid = () => {
           {/* <h3 className="title" style={{color: '#fff'}}>VMD Lab</h3> */}
           <div className="tags">
             <div className="tag">Web Development</div>
-            <div className="tag">Angular</div>
+            <div className="tag">ReactJS</div>
           </div>
         </div>
       </div>
@@ -43,8 +43,8 @@ export const MapIbid = () => {
         </p>
         
         <div className="actions center">
-          <a href='https://github.com/tonyhazama/vmdlab' target='_blank' className="action"><i className="fab fa-github" title="View on Github"></i></a>
-          <a href='https://tonyhazama.github.io/vmdlab/' target='_blank' className="action"><i className="fas fa-globe-asia" title="Live Preview"></i></a>
+          <a href='https://github.com/tonyhazama/vmdlab' target='_blank' rel="noopener noreferrer" className="action"><i className="fab fa-github" title="View on Github"></i></a>
+          <a href='https://tonyhazama.github.io/vmdlab/' target='_blank' rel="noopener noreferrer" className="action"><i className="fas fa-globe-asia" title="Live Preview"></i></a>
         </div>
       </div>
     </div>

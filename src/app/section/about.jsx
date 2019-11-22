@@ -10,7 +10,9 @@ export default class About extends Component {
         <Container className="page">
           <div className="row">
             <div className="col-md-4">
-              <img src={profilePic} alt="s" style={{width: '100%'}}/>
+              <div className="picture">
+                <img src={profilePic} alt="s" style={{width: '100%'}}/>
+              </div>
             </div>
             <div className="col-md-8" style={{padding: '1em 1.5em'}}>
               <h4 className="section-title">About</h4>
@@ -21,10 +23,9 @@ export default class About extends Component {
                 play video game  and watch movie in my freetime.
               </p>
               <p className="text medium">
-                I do karate as my primary sports. I also like running and swimming. 
-                Vel, veniam nesciunt repellat quaerat architecto temporibus 
-                consequatur laudantium porro laboriosam asperiores exercitationem minima sed, 
-                consectetur dolorum eligendi quisquam at recusandae itaque!
+                I do karate as my primary sports. I also running and swimming occasionally. 
+                I love cat, And other friendly furry animal. Im a man of science, open-minded
+                and open to new ideas.
               </p>
             </div>
           </div>

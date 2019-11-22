@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import ReactModal from 'react-modal';
-import { Portfolio2, Portfolio3, Vmdlab, Trav, MapIbid, Csmart } from './portfolio-item';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
+import { Emr, Vmdlab, Trav, MapIbid, Csmart } from './portfolio-item';
 
 
 export default class Portfolio extends Component {
@@ -19,7 +18,7 @@ export default class Portfolio extends Component {
     { title: 'Trav', image: 'trav2.jpg', content: Trav, tag: 'UI/UX' },
     { title: 'VMD Lab', image: 'vmdlab.jpg', content: Vmdlab, tag: 'WEB DEVELOPMENT' },
     { title: 'CSMART BCA', image: 'hehe.jpg', content: Csmart, tag: 'UI/UX' },
-    { title: 'EMR - Electronic Medical Record', image: 'hehe.jpg', content: Portfolio2, tag: 'WEB DEVELOPMENT' },
+    { title: 'EMR - Electronic Medical Record', image: 'hehe.jpg', content: Emr, tag: 'WEB DEVELOPMENT' },
   ]
 
   openModal(index) {
@@ -37,7 +36,7 @@ export default class Portfolio extends Component {
     return (
       <div className={"section " + theme} id="portfolio">
         <div className="container page">
-        <h4 className="section-title" href='#portfolio'># Portfolio</h4>
+        <h4 className="section-title" href='#portfolio'>Portfolio</h4>
           <div className="tiles">
             {this.works.map((item, index) => {
               const bg = !!item.image ?  item.image : `1.jpg`;

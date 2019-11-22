@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Nav, Navbar, Container } from 'react-bootstrap';
-import AnchorLink from 'react-anchor-link-smooth-scroll'
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { bodyXPos } from 'shared/functions/element';
 import logo from 'assets/images/transparent-logo-extra-small.png';
 

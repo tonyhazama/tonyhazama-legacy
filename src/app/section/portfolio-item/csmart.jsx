@@ -41,8 +41,12 @@ export const Csmart = () => {
         </p>
         
         <div className="actions center">
-          <a href='https://github.com/tonyhazama/vmdlab' target='_blank' className="action"><i className="fab fa-github" title="View on Github"></i></a>
-          <a href='https://tonyhazama.github.io/vmdlab/' target='_blank' className="action"><i className="fas fa-globe-asia" title="Live Preview"></i></a>
+          <a href='https://github.com/tonyhazama/vmdlab' target='_blank' rel="noopener noreferrer" className="action">
+            <i className="fab fa-github" title="View on Github"></i>
+          </a>
+          <a href='https://tonyhazama.github.io/vmdlab/' target='_blank' rel="noopener noreferrer" className="action">
+            <i className="fas fa-globe-asia" title="Live Preview"></i>
+          </a>
         </div>
       </div>
     </div>

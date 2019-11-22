@@ -20,11 +20,17 @@ export default class Contact extends Component {
             To get in touch, write to &nbsp;
             <a href="mailto:tonyhazama4721@gmail.com" style={{textDecoration: 'underline', color: '#102629'}}>tonyhazama4721@gmail.com</a>
           </h5>
-          <p className="text-center">or find more on here</p>
+          <p className="text-center">or find more about me here</p>
           <div className="actions center">
-            <a href='https://github.com/tonyhazama/vmdlab' target='_blank' className="action"><i className="fab fa-github" title="View on Github"></i></a>
-            <a href='https://github.com/tonyhazama/vmdlab' target='_blank' className="action"><i className="fab fa-behance-square" title="View on Github"></i></a>
-            <a href='https://github.com/tonyhazama/vmdlab' target='_blank' className="action"><i className="fab fa-instagram" title="View on Github"></i></a>
+            <a href='https://github.com/tonyhazama/vmdlab' target='_blank' rel="noopener noreferrer" className="action gh">
+              <i className="fab fa-github" title="View on Github"></i>
+            </a>
+            <a href='https://github.com/tonyhazama/vmdlab' target='_blank' rel="noopener noreferrer" className="action bh">
+              <i className="fab fa-behance-square" title="View on Github"></i>
+            </a>
+            <a href='https://github.com/tonyhazama/vmdlab' target='_blank' rel="noopener noreferrer" className="action ig">
+              <i className="fab fa-instagram" title="View on Github"></i>
+            </a>
             {/* <a href='https://tonyhazama.github.io/vmdlab/' target='_blank' className="action"><i className="fas fa-globe-asia" title="Live Preview"></i></a> */}
         </div>
         </Container>

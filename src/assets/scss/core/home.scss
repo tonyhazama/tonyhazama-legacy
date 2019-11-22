@@ -5,29 +5,82 @@
   background-position: center; 
   color: #ffffff;
 
-  .name{
-    // font-variant: 'bold';
-    font-size: 3.2em;
-    margin: 0px auto;
-    font-weight: 600;
-    text-transform: uppercase;
-  }
-
-  .job{
-    font-size: 2em;
-    font-weight: 300;
-    margin-bottom: 0px;
-  }
-
-  .desc{
-    font-size: 1.4em;
-    font-weight: 300;  
-  }
-
-  .sidelink{
+  .container-fluid{
+    height: 100%;
     display: flex;
     flex-direction: column;
-    // writing-mode: vertical-rl;
-    > div { margin: 0px 1em; }
+    justify-content: center;
+    align-items: center;
   }
+  
+  .title{
+    // margin-top: 60px + 40px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .name{
+      // font-variant: 'bold';
+      font-size: 3.2em;
+      margin: 0px auto;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  
+    .job{
+      font-size: 2em;
+      font-weight: 300;
+      margin-bottom: 1em;
+    }
+  
+    .desc{
+      font-size: 1.4em;
+      font-weight: 300;  
+    }
+
+    .button{
+      background: rgba($color: #fff, $alpha: 0);
+      height: 50px;
+      line-height: 50px;
+      transition: 0.1s;
+      cursor: pointer;
+      margin-bottom: -50px;
+      border: 1px solid #ffffff;
+      color: #ffffff;
+      padding: 0px 40px;
+    }
+
+    .button:hover{
+      background: rgba($color: #fff, $alpha: 0.2);
+    }
+  }
+
+  .actions{
+    opacity: 1;
+    transition: 0.2s;
+    margin-top: -104px ;
+    margin-bottom: 40px;
+    height: 64px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+
+    &.hidden { opacity: 0; }
+
+    .action{
+      transition: 0.1s;
+      display: block;
+      color: #ffffff;
+      font-size: 1.8em;
+      padding: 0px 0.5em;
+      cursor: pointer;
+    }
+
+    .action:hover {
+      padding-top: 0.25em;
+    }
+  }
+
 }
