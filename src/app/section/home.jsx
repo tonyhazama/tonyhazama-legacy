@@ -13,10 +13,10 @@ export default class Home extends Component {
   }
   
   componentDidMount() {
-    window.addEventListener('scroll', () => this.checkNavbarPos());
+    window.addEventListener('scroll', () => this.isSubmerged());
   }
 
-  checkNavbarPos() {
+  isSubmerged() {
     const homeHeight = document.getElementById('home').clientHeight;
     let submerged;
     if (bodyXPos() > (homeHeight * (3 / 5))) { submerged = true;

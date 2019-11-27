@@ -17,7 +17,7 @@ export default class Portfolio extends Component {
     { title: 'Market Auction Price', image: 'map3.jpg', content: MapIbid, tag: 'WEB DEVELOPMENT' },
     { title: 'Trav', image: 'trav2.jpg', content: Trav, tag: 'UI/UX' },
     { title: 'VMD Lab', image: 'vmdlab.jpg', content: Vmdlab, tag: 'WEB DEVELOPMENT' },
-    { title: 'CSMART BCA', image: 'hehe.jpg', content: Csmart, tag: 'UI/UX' },
+    { title: 'CSMART BCA', image: 'hehe.jpg', content: Csmart, tag: 'WEB DEVELOPMENT' },
     { title: 'EMR - Electronic Medical Record', image: 'hehe.jpg', content: Emr, tag: 'WEB DEVELOPMENT' },
   ]
 

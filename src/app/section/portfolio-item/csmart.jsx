@@ -26,7 +26,7 @@ export const Csmart = () => {
           <div className="desc">
             <span>2017 - 2018</span>
             <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>
-            <span>Personal Project</span>
+            <span>Bank Central Asia</span>
           </div>
         </div>
         <p className="text">

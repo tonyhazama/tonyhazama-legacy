@@ -55,3 +55,47 @@ $darkslate: #102629;
     overflow: hidden;
   }
 }
+
+.button{
+  opacity: 1;
+  background: rgba($color: #fff, $alpha: 0);
+  height: 50px;
+  line-height: 50px;
+  transition: 0.1s;
+  cursor: pointer;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  padding: 0px 40px;
+
+  &.square{
+    width: 50px;
+    padding: 0px;
+    text-align: center;
+  }
+
+  &.dark{
+    background: transparent;
+    color: #102629;
+    border-color: #102629;
+  }
+}
+
+.button:hover{
+  background: rgba($color: #fff, $alpha: 0.2);
+}
+
+.button.dark:hover{
+  background: rgba($color: #102629, $alpha: 0.2);
+}
+
+.back-top{
+  position: fixed;
+  font-size: 1.2em;;
+  bottom: 2em;
+  right: 2em;
+}
+
+
+.button.hidden{
+  opacity: 0;
+}
